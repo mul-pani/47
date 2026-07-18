@@ -1,0 +1,128 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Tahoma, sans-serif;
+    background:linear-gradient(135deg,#eef4ff,#dbeafe);
+    color:#333;
+}
+
+/* Navigation */
+
+nav{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+nav h1{
+    font-size:clamp(1.5rem,4vw,2.5rem);
+}
+
+/* Main */
+
+main{
+    width:min(92%,1000px);
+    margin:40px auto;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+/* Card */
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    padding:20px;
+    color:#1e3a8a;
+    font-size:clamp(1.4rem,3vw,2rem);
+}
+
+.card p{
+    padding:20px;
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#555;
+}
+
+/* ---------- HOUSE IMAGE ---------- */
+
+.landscape{
+    width:100%;
+    max-height:550px;
+    object-fit:cover;
+    display:block;
+}
+
+/* ---------- GIRL IMAGE ---------- */
+
+.portrait{
+    display:block;
+    width:100%;
+    max-width:500px;
+    height:auto;
+    margin:20px auto;
+    object-fit:contain;
+    border-radius:12px;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+    main{
+        width:95%;
+        margin:25px auto;
+    }
+
+    .portrait{
+        max-width:350px;
+    }
+
+    .card p{
+        font-size:1rem;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+    nav{
+        padding:15px;
+    }
+
+    .portrait{
+        max-width:280px;
+    }
+
+    .card h2{
+        font-size:1.3rem;
+    }
+
+    .card p{
+        padding:16px;
+        font-size:.95rem;
+    }
+
+}
